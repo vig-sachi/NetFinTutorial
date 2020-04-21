@@ -212,17 +212,20 @@
 
             <h2 id="outline">Outline</h2>
 
-            <p>Part I: Background.<br />
-            Time sensitive networks and financial exchange requirements.
+            <p>Part I: Background<br/>
+            Financial Trading Networks: Requirements, current status and future evolution
+            The role of clock synchronization in building time sensitive networks
 
-            <p>Part II: Enabling networking technologies.<br />
-            Clock synchronization techniques, end-to-end measurement of in-network queuing delays from edge-based timestamps, "time perimeters" as a general framework for building jitter-free networks, facilitating novel packet ordering/delivery mechanisms. [Geng 2018, Geng 2019]
+            <p>Part II: Enabling networking technologies.<br/>
+            Clock synchronization techniques, end-to-end measurement of in-network queuing delays from edge-based timestamps,
+            "time perimeters" as a general framework for building jitter-free networks, facilitating novel packet ordering/delivery mechanisms.
 
-            <p>Part III: CloudEx Hands-on Demo.<br /> 
-            Introduction to CloudEx: a fair, high frequency exchange in the cloud. Hands-on demo allowing attendees to interact with CloudEx.
+            <p>Part III: CloudEx: Design and demo.<br/>
+            Introduction to CloudEx: a fair, high frequency exchange in the cloud.
+            Exchange infrastructure: design goals and implementation in the cloud.
+            Matching engine: algorithms and their effect of price discovery. Demo allowing attendees to interact with CloudEx.
 
             <h2 id="background">Background</h2>
-
 
             <p>Networking is of critical importance to financial applications, especially in the context of electronic trading exchanges. Such trading exchanges ​are required to provide "fair access". This means a trader's order cannot be overtaken by another trader's order (thus, orders have to be processed in a globally FIFO manner), and no trader should receive market data before any other trader. Currently, exchanges meet these requirements using carefully-engineered, bespoke data networks, limiting their scale and scope. In this tutorial, we show that accurate clock synchronization deployed at scale can transform an unpredictable market into a nearly perfect FIFO machine, even if the market is built upon extremely jittery infrastructure such as the public cloud. This would not only allow exchanges to scale but it would also significantly reduce the cost of participation, thereby democratizing financial trading.</p>
 
