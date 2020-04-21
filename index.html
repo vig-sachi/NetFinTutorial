@@ -200,25 +200,25 @@
             </p>
 
             <p>
-	       While this view of finance continues to be important, an
-               alternative, unexplored view of finance is from the perspective of an exchange
-               operator---as opposed to a trader participating in the exchange. In addition to low
-               tick-to-trade latency, an exchange operator needs to ensure fair access to the
-               exchange across different market traders, i.e., ensuring that all traders see
-               the same traversal times into and out of the exchange.
+	       An alternative view of finance is from the perspective of an
+               exchange operator---as opposed to a trader participating in the exchange. In
+               addition to low latency, an exchange operator needs to ensure fair access to
+               the exchange across different market traders, i.e., ensuring that all traders
+               see the same traversal times into and out of the exchange.
             </p>
 
             <p>
-	       This fairness of market latencies contrasts against the
-               traditional networking view of fairness, which deals with fair allocation of
-               throughput instead of latency. In the context of trading exchanges, latency
-               fairness has two aspects to it: on the inbound side when traders' trades are
-               executed and on the outbound side when ticks are dissemintated to traders.
-               This means a trader's order cannot be overtaken by another trader's order.
-               Thus, orders have to be processed in a globally FIFO manner even if they enter
-               the exchange at different locations. Further, no trader should receive market
-               data before any other trader.
+               This fairness of market latencies contrasts with the traditional networking
+               view of fairness, which deals with fair allocation of throughput instead of
+               latency. In the context of trading exchanges, latency fairness has two aspects
+               to it: on the inbound side when market participants' orders are transmitted to
+               the matching engine and on the outbound side when market data are disseminated
+               to traders. This means a trader's order cannot be overtaken by another trader's
+               order. Thus, orders have to be processed in a globally FIFO manner even if they
+               enter the exchange at different gateways. Further, no trader should receive
+               market data before any other trader.
             </p>
+
             <p>
                Currently, exchanges meet these requirements
                using carefully-engineered, bespoke data networks, limiting their scale and
@@ -268,7 +268,7 @@
 
             <h2 id="background">Background</h2>
 
-            </p>Three trends make this tutorial particularly timely. First, the widespread availability of public cloud computing services reduces the capital expenses associated with running web services, making the cloud an attractive platform for deploying financial applications. At the same time, the data privacy concerns associated with the cloud are beginning to be addressed through the availability of solutions like AWS GovCloud that offer
+            </p>Three trends make this tutorial particularly timely. First, the widespread availability of public cloud computing services reduces the capital expenses associated with running web services, making the cloud an attractive platform for deploying financial applications. At the same time, the data privacy concerns associated with the cloud are beginning to be addressed through the availability of solutions that offer
             more stringent data privacy guarantees.</p>
 
             <p>Second, while the availability of the public cloud has lowered the barrier to deploying new applications at scale, the variable nature of cloud infrastructure due to the heterogenous and unknown nature of cloud hardware causes significant latency variability---a detriment to deploying electronic trading exchanges in the cloud. Addressing this latency variability requires highly accurate clock synchronization algorithms that can be deployed in software by cloud customers without requiring new hardware. The development of a recent software time synchronization algorithm (Huygens, NSDI 2018) allows us to revisit the possibility of using the public cloud for electronic trading exchanges. </p>
