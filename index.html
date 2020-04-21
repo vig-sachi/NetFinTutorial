@@ -191,34 +191,47 @@
 
             <h2 id="call-for-participation">Call For Participation</h2>
 
-            <p>Traditionally, the networking view of finance has been one of a speed race to enable low-latency trading. Using a variety of techniques, market                traders have sought to minimize the tick-to-trade latency: the time duration between receiving an update to a price (tick)
-               and buying or selling  an order based on this price (trade). These techniques include kernel bypass networking, FPGAs, low-latency NICs,
-               layer 1 switching, and microwave links.
+	    <p>Traditionally, the networking view of finance has been one of a
+               speed race to enable low-latency trading. Using a variety of techniques, market
+               traders have sought to minimize the tick-to-trade latency: the time duration
+               between receiving an update to a price (tick) and buying or selling  an order
+               based on this price (trade). These techniques include kernel bypass networking,
+               FPGAs, low-latency NICs, layer 1 switching, and microwave links.
             </p>
 
             <p>
-               While this view of finance continues to be important, an alternative, relatively unexplored view of finance is from the perspective of
-               an exchange operator---as opposed to a trader in the exchange. In addition to low tick-to-trade latency, an exchange operator
-               cares about ensuring fair access to the exchange across different market traders, i.e., ensuring that all traders see the
-               same traversal times into and out of the exchange.
+	       While this view of finance continues to be important, an
+               alternative, unexplored view of finance is from the perspective of an exchange
+               operator---as opposed to a trader in the exchange. In addition to low
+               tick-to-trade latency, an exchange operator needs to ensure fair access to the
+               exchange across different market traders, i.e., ensuring that all traders see
+               the same traversal times into and out of the exchange.
             </p>
 
             <p>
-               This fairness of market latencies contrasts against the traditional networking view of fairness, that deals with fair allocation of
-               throughput instead of latency. In the context of trading exchanges, latency fairness has two aspects to it: on the inbound side when
-               participant trades are executed and on the outbound side when ticks are dissemintated to participants. This means a trader's order
-               cannot be overtaken by another trader's order (thus, orders have to be processed in a globally FIFO manner), and no trader should
-               receive market data before any other trader. Currently, exchanges meet these requirements using carefully-engineered,
-               bespoke data networks, limiting their scale and scope. In this tutorial, we show that accurate clock synchronization deployed at scale can
-               transform an unpredictable market into a nearly perfect FIFO machine, even if the market is built upon extremely jittery infrastructure
-               such as the public cloud. This would not only allow exchanges to scale but it would also significantly reduce the cost of participation,
-               thereby democratizing financial trading.
+	       This fairness of market latencies contrasts against the
+               traditional networking view of fairness, which deals with fair allocation of
+               throughput instead of latency. In the context of trading exchanges, latency
+               fairness has two aspects to it: on the inbound side when participant trades are
+               executed and on the outbound side when ticks are dissemintated to participants.
+               This means a trader's order cannot be overtaken by another trader's order.
+               Thus, orders have to be processed in a globally FIFO manner even if they enter
+               the exchange at different locations. Further, no trader should receive market
+               data before any other trader. Currently, exchanges meet these requirements
+               using carefully-engineered, bespoke data networks, limiting their scale and
+               scope. In this tutorial, we show that accurate clock synchronization deployed
+               at scale can transform an unpredictable market into a nearly perfect FIFO
+               machine, even if the market is built upon extremely jittery infrastructure such
+               as the public cloud. This would not only allow exchanges to scale but it would
+               also significantly reduce the cost of participation, thereby democratizing
+               financial trading.
             </p>
 
             <p>
-               Attendees will also learn about and interact with CloudEx: a fair, high frequency exchange in the cloud. CloudEx will be used in a
-               CS course at Stanford in Fall 2020 in which student groups will play the role of “market participants” by engaging in high-frequency
-               and algorithmic trading.
+	       Attendees will also learn about and interact with CloudEx: a
+               fair, high frequency exchange in the cloud. CloudEx will be used in a CS course
+               at Stanford in Fall 2020 in which student groups will play the role of “market
+               participants” by engaging in high-frequency and algorithmic trading.
             </p>
 
             <h2 id="travel-support">Travel Support</h2>
@@ -251,9 +264,6 @@
             Matching engine: algorithms and their effect of price discovery. Demo allowing attendees to interact with CloudEx.
 
             <h2 id="background">Background</h2>
-
-            <p>Networking is of critical importance to financial applications, especially in the context of electronic trading exchanges. Such trading exchanges are required to provide "fair access". This means a trader's order cannot be overtaken by another trader's order (thus, orders have to be processed in a globally FIFO manner), and no trader should receive market data before any other trader. Currently, exchanges meet these requirements using carefully-engineered, bespoke data networks, limiting their scale and scope. In this tutorial, we show that accurate clock synchronization deployed at scale can transform an unpredictable market into a nearly perfect FIFO machine, even if the market is built upon extremely jittery infrastructure such as the public cloud. This would not only allow exchanges to scale but it would also significantly reduce the cost of participation, thereby democratizing financial trading.</p>
-
 
             </p>Three trends make this tutorial particularly timely. First, the widespread availability of public cloud computing services reduces the capital expenses associated with running web services, making the cloud an attractive platform for deploying financial applications. At the same time, the data privacy concerns associated with the cloud are beginning to be addressed through the availability of solutions like AWS GovCloud that offer
             more stringent data privacy guarantees.</p>
